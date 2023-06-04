@@ -63,19 +63,20 @@ jQuery('.team-member-wrapper p a, .team-member-grid-wrapper p a').on('click', fu
   e.preventDefault();
   jQuery('#team-member-modal').modal('show');
   var loader = jQuery("#fancybox-loading");
+
+  var id = jQuery(this).parents('.team-member-wrapper, .team-member-grid-wrapper').find('h3.title').data("id");
+  var url = '/descriptions/' + id + '.html';
+
   jQuery.ajax({
-    url: ajaxurl,
-    type: 'post',
-    data: {
-      action: 'team_member',
-      id: jQuery(this).parents('.team-member-wrapper, .team-member-grid-wrapper').find('h3.title').data("id"),
-    },
+    url: url,
+    type: 'get',
     beforeSend: function () {
       jQuery(loader).show();
     },
     success: function (data) {
       var g_modal = jQuery("#team-member-modal .modal-body");
-      jQuery(g_modal).html(data)
+      var content = '<div class="close" data-bs-dismiss="modal" aria-label="Close"></div>' + data;
+      jQuery(g_modal).html(content)
 
       jQuery(loader).hide();
     }
