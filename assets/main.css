@@ -281,6 +281,16 @@ pre code {
 /*------------------------------------------------------------------
 4c. GLOBAL STYLES - ICONS
 -------------------------------------------------------------------*/
+@font-face {
+	font-family: "icomoon";
+	font-display: block;
+	src: url("fonts/icomoon.eot?jc5bpz");
+	src: url("fonts/icomoon.eot?jc5bpz#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?jc5bpz") format("truetype"),
+		url("fonts/icomoon.woff?jc5bpz") format("woff"), url("fonts/icomoon.svg?jc5bpz#icomoon") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
 [class^="icon-"],
 [class*=" icon-"] {
 	color: #333;
@@ -2906,6 +2916,18 @@ ul#footer-social-menu [class*=" icon-"]:hover {
 	.site-navigation {
 		padding: 10px 0 0;
 	}
+
+	.site-navigation #main-menu li.social {
+		margin: 0;
+		padding: 0;
+	}
+
+	.site-navigation #main-menu li.social > a > span {
+		margin: 0;
+		padding: 0;
+		color: #f88227;
+	}
+
 	/*------------------------------------------------------------------
 5e. SEARCH
 -------------------------------------------------------------------*/
@@ -2976,6 +2998,7 @@ ul#footer-social-menu [class*=" icon-"]:hover {
 	.site-navigation #main-menu li:last-child {
 		margin-right: 0;
 	}
+
 	/*------------------------------------------------------------------
 22. BAND - HERO
 -------------------------------------------------------------------*/
