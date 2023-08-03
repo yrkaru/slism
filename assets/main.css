@@ -754,7 +754,7 @@ table {
 table th,
 table td {
 	border: solid 1px #e3e3e3;
-	font-size: 12px;
+	font-size: 1rem;
 	padding: 3px;
 	vertical-align: top;
 }
@@ -2550,6 +2550,24 @@ footer .widget ul li a:active {
 	color: #ffffff;
 	text-decoration: underline;
 }
+
+footer .nav-item {
+    position: relative;
+}
+
+footer .nav-item:not(:last-child)::before {
+    content: ''; 
+    position: absolute; 
+    right: -4px; 
+    top: 50%;
+    transform: translateY(-50%); 
+    width: 5px;
+    height: 5px;
+    background-color: #ffffff; /* Circle Color */
+    border-radius: 50%; 
+}
+
+
 /*------------------------------------------------------------------
 100b. FOOTER - COPYRIGHT MENU
 -------------------------------------------------------------------*/
